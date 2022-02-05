@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "307254890534",
+    "project_id": "aumeet-51cb3",
+    "storage_bucket": "aumeet-51cb3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:307254890534:android:7c1bd85e22a01562ee56e7",
+        "android_client_info": {
+          "package_name": "com.bignerdranch.android.aumeet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "307254890534-qbq8rnrism73lbtr1m0tr8rqhjmol2le.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bignerdranch.android.aumeet",
+            "certificate_hash": "5d38b11f830a73ca7eaede013fb5a29bae26b5fd"
+          }
+        },
+        {
+          "client_id": "307254890534-n1ldal74chev4b3gf0ho7rrkn53i52fl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7v3gPYMHdbk3-EWPsBdMdlhWryluhTGE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "307254890534-n1ldal74chev4b3gf0ho7rrkn53i52fl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
