@@ -29,7 +29,6 @@ public class LoginActivity extends AppCompatActivity {
     EditText emailEt,passEt;
     Button register_btn, login_btn;
     CheckBox checkBox;
-    ProgressBar progressBar;
     FirebaseAuth mAuth;
 
     @Override
@@ -42,7 +41,6 @@ public class LoginActivity extends AppCompatActivity {
         register_btn = findViewById(R.id.login_to_signup);
         login_btn = findViewById(R.id.button_login);
         checkBox = findViewById(R.id.login_checkbox);
-        progressBar = findViewById(R.id.progressbar_login);
         mAuth = FirebaseAuth.getInstance();
 
 
@@ -76,7 +74,7 @@ public class LoginActivity extends AppCompatActivity {
                 String email = emailEt.getText().toString();
                 String pass = passEt.getText().toString();
                 if (!TextUtils.isEmpty(email) || !TextUtils.isEmpty(pass)) {
-                    progressBar.setVisibility(View.VISIBLE);
+
                     mAuth.signInWithEmailAndPassword(email,pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {

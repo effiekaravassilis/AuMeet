@@ -27,7 +27,6 @@ public class RegisterActivity extends AppCompatActivity {
     EditText emailEt,passEt,confirm_pass;
     Button register_btn, login_btn;
     CheckBox checkBox;
-    ProgressBar progressBar;
     FirebaseAuth mAuth;
 
     @Override
@@ -41,7 +40,6 @@ public class RegisterActivity extends AppCompatActivity {
         register_btn = findViewById(R.id.button_register);
         login_btn = findViewById(R.id.signup_to_login);
         checkBox = findViewById(R.id.register_checkbox);
-        progressBar = findViewById(R.id.progressbar_register);
         mAuth = FirebaseAuth.getInstance();
 
         checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -70,7 +68,7 @@ public class RegisterActivity extends AppCompatActivity {
                 if (!TextUtils.isEmpty(email) || !TextUtils.isEmpty(pass) || !TextUtils.isEmpty(confirm_password)) {
 
                     if (pass.equals(confirm_password)) {
-                        progressBar.setVisibility(View.VISIBLE);
+
 
                         mAuth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             @Override
@@ -78,7 +76,7 @@ public class RegisterActivity extends AppCompatActivity {
 
                                 if (task.isSuccessful()) {
                                     sendtoMain();
-                                    progressBar.setVisibility(View.INVISIBLE);
+
                                 } else {
                                     //String error = task.getException().getMessage();
                                     Toast.makeText(RegisterActivity.this, "Error", Toast.LENGTH_SHORT).show();
@@ -87,7 +85,7 @@ public class RegisterActivity extends AppCompatActivity {
                         });
 
                     } else {
-                        progressBar.setVisibility(View.INVISIBLE);
+
                         Toast.makeText(RegisterActivity.this, "passwords don't match", Toast.LENGTH_SHORT).show();
                     }
                 } else {

@@ -44,7 +44,7 @@
         android:paddingStart="10dp"
         android:drawableStart="@drawable/custom_pass_input"
         android:drawablePadding="10dp"
-        android:inputType="text"
+        android:inputType="textPassword"
         android:textColor="@android:color/black"
         android:textColorHint="@color/grey"
         android:id="@+id/register_password_et"
@@ -60,7 +60,7 @@
         android:paddingStart="10dp"
         android:drawableStart="@drawable/custom_pass_input"
         android:drawablePadding="10dp"
-        android:inputType="text"
+        android:inputType="textPassword"
         android:textColor="@android:color/black"
         android:textColorHint="@color/grey"
         android:id="@+id/register_confirmpassword_et"
@@ -70,7 +70,7 @@
 
     <CheckBox
         android:layout_width="200dp"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:text="Show Password"
         android:buttonTint="@color/brown"
         android:textColor="@color/brown"
