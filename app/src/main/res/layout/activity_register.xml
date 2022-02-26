@@ -14,7 +14,8 @@
         android:layout_height="wrap_content"
         android:text="Create Account"
         android:textColor="@color/brown"
-        android:textSize="50sp"
+        android:fontFamily="cursive"
+        android:textSize="60sp"
         android:textStyle = "bold"
         android:layout_marginBottom="60dp"
         android:textAlignment="center"
@@ -95,21 +96,11 @@
         android:layout_height="wrap_content"
         android:background="@color/white"
         android:textColor="@color/brown"
+        android:backgroundTint="@color/light_grey"
         android:text="Login"
         android:layout_margin="10dp"
         android:id="@+id/signup_to_login"
         android:textSize="25sp"/>
 
-
-    <ProgressBar
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/progressbar_register"
-        android:indeterminate="true"
-        android:indeterminateTint="@color/white"
-        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-        android:visibility="invisible"
-        android:layout_marginTop="20dp"
-        />
 
 </LinearLayout>
