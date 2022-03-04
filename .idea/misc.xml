@@ -15,9 +15,11 @@
         <entry key="app/src/main/res/drawable/ic_baseline_lock_24.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_baseline_message_24.xml" value="0.115" />
         <entry key="app/src/main/res/drawable/ic_baseline_profile_24.xml" value="0.115" />
+        <entry key="app/src/main/res/drawable/ic_bio.xml" value="0.1345" />
         <entry key="app/src/main/res/drawable/ic_outline_request_24.xml" value="0.115" />
         <entry key="app/src/main/res/font/fonts.xml" value="0.16018518518518518" />
         <entry key="app/src/main/res/font/text_font.xml" value="0.16018518518518518" />
+        <entry key="app/src/main/res/layout/activity_create_profile.xml" value="0.2" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.11576080322265625" />
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.14322916666666666" />

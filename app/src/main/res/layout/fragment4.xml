@@ -9,6 +9,8 @@
         android:layout_height="wrap_content"
         android:text="Profile"
         android:textSize="50sp"
+        android:clickable="true"
+        android:id="@+id/tv_profile"
         tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
