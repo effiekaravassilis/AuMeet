@@ -10,9 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AuMeet">
         <activity
+            android:name=".UpdateProfile"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"/>
+        <activity
             android:name=".CreateProfile"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <activity
             android:name=".MainActivity"
             android:exported="false"
