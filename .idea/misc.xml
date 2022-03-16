@@ -8,6 +8,7 @@
         <entry key="app/src/main/res/drawable-v24/lock_focused.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/app_logo.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/button_background.xml" value="0.126" />
+        <entry key="app/src/main/res/drawable/campus_map.xml" value="0.118" />
         <entry key="app/src/main/res/drawable/custom_email_input.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/custom_input.xml" value="0.11" />
         <entry key="app/src/main/res/drawable/ic_baseline_add_photo_alternate_24.xml" value="0.126" />
@@ -33,6 +34,8 @@
         <entry key="app/src/main/res/layout/activity_create_profile.xml" value="0.2" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.11576080322265625" />
+        <entry key="app/src/main/res/layout/activity_map.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_privacy.xml" value="0.18229166666666666" />
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.14322916666666666" />
         <entry key="app/src/main/res/layout/activity_splashscreen.xml" value="0.1796875" />
         <entry key="app/src/main/res/layout/activity_update_profile.xml" value="0.24166666666666667" />

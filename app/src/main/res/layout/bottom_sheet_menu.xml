@@ -18,8 +18,31 @@
             android:layout_height="wrap_content"
             android:text="Campus Map"
             android:textColor="@android:color/black"
-            android:textSize="30sp"
+            android:textSize="25sp"
             android:drawableStart="@drawable/ic_baseline_map_24"
+            android:paddingStart="10dp"
+            android:drawablePadding="10dp"
+            android:padding="5dp"/>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="4dp"
+        android:id="@+id/cv_privacy">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Privacy"
+            android:textColor="@android:color/black"
+            android:textSize="25sp"
+            android:drawableStart="@drawable/ic_baseline_lock_24"
             android:paddingStart="10dp"
             android:drawablePadding="10dp"
             android:padding="5dp"/>
@@ -44,7 +67,7 @@
             android:layout_height="wrap_content"
             android:text="Delete"
             android:textColor="@android:color/black"
-            android:textSize="30sp"
+            android:textSize="25sp"
             android:drawableStart="@drawable/ic_baseline_delete_24"
             android:paddingStart="10dp"
             android:drawablePadding="10dp"
@@ -64,9 +87,9 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Logout"
+            android:text="Log Out"
             android:textColor="@android:color/black"
-            android:textSize="30sp"
+            android:textSize="25sp"
             android:drawableStart="@drawable/ic_baseline_power_settings_new_24"
             android:paddingStart="10dp"
             android:drawablePadding="10dp"
