@@ -17,6 +17,7 @@
         <entry key="app/src/main/res/drawable/ic_baseline_edit_24.xml" value="0.126" />
         <entry key="app/src/main/res/drawable/ic_baseline_email_24.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.115" />
+        <entry key="app/src/main/res/drawable/ic_baseline_keyboard_arrow_left_24.xml" value="0.104" />
         <entry key="app/src/main/res/drawable/ic_baseline_lock_24.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_baseline_major.xml" value="0.126" />
         <entry key="app/src/main/res/drawable/ic_baseline_map_24.xml" value="0.115" />
@@ -32,6 +33,7 @@
         <entry key="app/src/main/res/font/fonts.xml" value="0.16018518518518518" />
         <entry key="app/src/main/res/font/text_font.xml" value="0.16018518518518518" />
         <entry key="app/src/main/res/layout/activity_create_profile.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/activity_image.xml" value="0.165" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.11576080322265625" />
         <entry key="app/src/main/res/layout/activity_map.xml" value="0.1" />

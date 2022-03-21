@@ -55,6 +55,7 @@ public class Fragment4 extends Fragment implements View.OnClickListener{
 
         imageButtonMenu.setOnClickListener(this);
         ib_edit.setOnClickListener(this);
+        imageView.setOnClickListener(this);
 
     }
 
@@ -69,7 +70,10 @@ public class Fragment4 extends Fragment implements View.OnClickListener{
             case R.id.ib_menu_f4:
                 BottomSheetMenu bottomSheetMenu = new BottomSheetMenu();
                 bottomSheetMenu.show(getFragmentManager(),"bottomsheet");
-
+                break;
+            case R.id.iv_f4:
+                Intent intent1 = new Intent(getActivity(),ImageActivity.class);
+                startActivity(intent1);
                 break;
 
         }
