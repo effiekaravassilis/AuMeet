@@ -105,7 +105,9 @@ public class UpdateProfile extends AppCompatActivity {
         String email = etEmail.getText().toString();
 
 
-        final DocumentReference sDoc = db.collection("user").document(currentuid);
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        String currentuid1= user.getUid();
+        final DocumentReference sDoc = db.collection("user").document(currentuid1);
         db.runTransaction(new Transaction.Function<Void>() {
             @Override
             public Void apply(Transaction transaction) throws FirebaseFirestoreException {

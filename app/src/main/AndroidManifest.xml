@@ -10,9 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AuMeet">
         <activity
-            android:name=".ImageActivity"
+            android:name=".PostActivity"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"/>
+        <activity
+            android:name=".UpdatePhoto"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"/>
+        <activity
+            android:name=".ImageActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <activity
             android:name=".MapActivity"
             android:exported="false"

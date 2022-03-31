@@ -26,7 +26,7 @@ public class Fragment4 extends Fragment implements View.OnClickListener{
 
     ImageView imageView;
     TextView nameEt, majorEt, bioEt, emailEt, scheduleEt;
-    ImageButton ib_edit,imageButtonMenu;
+    ImageButton imageButtonEdit,imageButtonMenu;
     DocumentReference reference;
     FirebaseFirestore firestore;
 
@@ -42,6 +42,12 @@ public class Fragment4 extends Fragment implements View.OnClickListener{
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        String userid = user.getUid();
+
+        firestore = FirebaseFirestore.getInstance();
+        reference = firestore.collection("user").document(userid);
+
 
         imageView = getActivity().findViewById(R.id.iv_f4);
         nameEt = getActivity().findViewById(R.id.tv_name_f4);
@@ -50,11 +56,11 @@ public class Fragment4 extends Fragment implements View.OnClickListener{
         emailEt = getActivity().findViewById(R.id.tv_email_f4);
         scheduleEt = getActivity().findViewById(R.id.tv_schedule_f4);
 
-        ib_edit = getActivity().findViewById(R.id.ib_edit_f4);
+        imageButtonEdit = getActivity().findViewById(R.id.ib_edit_f4);
         imageButtonMenu = getActivity().findViewById(R.id.ib_menu_f4);
 
         imageButtonMenu.setOnClickListener(this);
-        ib_edit.setOnClickListener(this);
+        imageButtonEdit.setOnClickListener(this);
         imageView.setOnClickListener(this);
 
     }
@@ -112,8 +118,8 @@ public class Fragment4 extends Fragment implements View.OnClickListener{
                             majorEt.setText(majorResult);
 
 
-                        }else {
-                            Intent intent = new Intent(getActivity(),CreateProfile.class);
+                        } else {
+                            Intent intent = new Intent(getActivity(), CreateProfile.class);
                             startActivity(intent);
                         }
 
