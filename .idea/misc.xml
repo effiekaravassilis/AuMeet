@@ -52,12 +52,14 @@
         <entry key="app/src/main/res/layout/activity_update_photo.xml" value="0.165" />
         <entry key="app/src/main/res/layout/activity_update_profile.xml" value="0.24166666666666667" />
         <entry key="app/src/main/res/layout/bottom_sheet_menu.xml" value="0.18229166666666666" />
+        <entry key="app/src/main/res/layout/custom_exoplayer.xml" value="0.18020833333333333" />
         <entry key="app/src/main/res/layout/event_item.xml" value="0.18020833333333333" />
         <entry key="app/src/main/res/layout/fragment1.xml" value="0.165" />
         <entry key="app/src/main/res/layout/fragment2.xml" value="0.253125" />
         <entry key="app/src/main/res/layout/fragment3.xml" value="0.165" />
         <entry key="app/src/main/res/layout/fragment4.xml" value="0.253125" />
         <entry key="app/src/main/res/layout/post_layout.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/post_options.xml" value="0.18020833333333333" />
         <entry key="app/src/main/res/menu/bottom_menu.xml" value="0.19010416666666666" />
       </map>
     </option>
