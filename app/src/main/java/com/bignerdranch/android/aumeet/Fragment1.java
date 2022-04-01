@@ -33,6 +33,10 @@ import com.squareup.picasso.Picasso;
 public class Fragment1 extends Fragment implements View.OnClickListener{
 
     Button button;
+    RecyclerView recyclerView;
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference reference, likeref;
+    Boolean likechecker = false;
 
 
     @Nullable
@@ -50,6 +54,11 @@ public class Fragment1 extends Fragment implements View.OnClickListener{
 
 
         button = getActivity().findViewById(R.id.createpost_f1);
+        reference = database.getReference("All posts");
+        likeref = database.getReference("post likes");
+        recyclerView = getActivity().findViewById(R.id.rv_posts);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
         button.setOnClickListener(this);
     }
@@ -65,4 +74,83 @@ public class Fragment1 extends Fragment implements View.OnClickListener{
                 break;
 
         }
-    }}
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+
+        FirebaseRecyclerOptions<Postmember> options =
+                new FirebaseRecyclerOptions.Builder<Postmember>()
+                        .setQuery(reference,Postmember.class)
+                        .build();
+
+        FirebaseRecyclerAdapter<Postmember,PostViewholder> firebaseRecyclerAdapter =
+                new FirebaseRecyclerAdapter<Postmember, PostViewholder>(options) {
+                    @Override
+                    protected void onBindViewHolder(@NonNull PostViewholder holder, int position, @NonNull final Postmember model) {
+
+                        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                        final String currentUserid = user.getUid();
+
+                        final String postkey = getRef(position).getKey();
+                        holder.SetPost(getActivity(),model.getName(),model.getUrl(),model.getPostUri(), model.getTime(),
+                                model.getUid(),model.getType(), model.getDesc());
+
+
+                        holder.likeschecker(postkey);
+                        holder.likebtn.setOnClickListener((view) -> {
+
+                            likechecker = true;
+
+                            likeref.addValueEventListener(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                                    if (likechecker.equals(true)) {
+                                        if (snapshot.child(postkey).hasChild(currentUserid)) {
+                                            likeref.child(postkey).child(currentUserid).removeValue();
+                                            Toast.makeText(getActivity(), "", Toast.LENGTH_SHORT).show();
+                                            likechecker = false;
+                                        } else {
+
+                                            likeref.child(postkey).child(currentUserid).setValue(true);
+
+                                            likechecker = false;
+
+                                            Toast.makeText(getActivity(), "", Toast.LENGTH_SHORT).show();
+                                        }
+
+                                    }
+
+
+                                }
+
+                                @Override
+                                public void onCancelled(@NonNull DatabaseError error) {
+
+                                }
+                            });
+                        });
+                    }
+
+
+
+                    @NonNull
+                    @Override
+                    public PostViewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+                        View view = LayoutInflater.from(parent.getContext())
+                                .inflate(R.layout.post_layout,parent,false);
+
+                        return new PostViewholder(view);
+
+                    }
+                };
+        firebaseRecyclerAdapter.startListening();
+
+        recyclerView.setAdapter(firebaseRecyclerAdapter);
+
+
+    }
+
+}
