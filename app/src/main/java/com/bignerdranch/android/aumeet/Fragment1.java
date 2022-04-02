@@ -42,6 +42,7 @@ public class Fragment1 extends Fragment implements View.OnClickListener{
     Boolean likechecker = false;
     DatabaseReference db1, db2, db3;
 
+    LinearLayoutManager linearLayoutManager;
 
     @Nullable
     @Override
@@ -70,7 +71,11 @@ public class Fragment1 extends Fragment implements View.OnClickListener{
         db2 = database.getReference("All videos").child(currentuid);
         db3 = database.getReference("All posts");
 
-        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        linearLayoutManager = new LinearLayoutManager(getActivity());
+        recyclerView.setLayoutManager(linearLayoutManager);
+        linearLayoutManager.setReverseLayout(true);
+        linearLayoutManager.setStackFromEnd(true);
+
 
         button.setOnClickListener(this);
     }
