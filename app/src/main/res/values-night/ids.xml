@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="name_ch_item_tv" type="id"/>
+    <item name="send_messagech_item_btn" type="id" />
+    <item name="cardview_profile" type="id" />
+    <item name="tv_name_profile" type="id" />
+    <item name="tv_major_profile" type="id" />
+    <item name="viewUser_profile" type="id" />
+    <item name="profile_imageview" type="id" />
+    <item name="sender_tv" type="id" />
+</resources>
