@@ -183,10 +183,11 @@ public class PostActivity extends AppCompatActivity {
         final String savedate = currentdate.format(cdate.getTime());
 
         Calendar ctime = Calendar.getInstance();
-        SimpleDateFormat currenttime = new SimpleDateFormat("HH:mm:ss");
-        final String savetime = currentdate.format(cdate.getTime());
+        SimpleDateFormat currenttime = new SimpleDateFormat("HH:mm a");
+        final String savetime = currenttime.format(ctime.getTime());
 
-        String time = savedate +":"+ savetime;
+
+        String time = savedate +" at "+ savetime;
 
 
         if (TextUtils.isEmpty(desc) || selectedUri != null){

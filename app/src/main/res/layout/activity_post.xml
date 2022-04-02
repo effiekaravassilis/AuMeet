@@ -19,7 +19,7 @@
         android:layout_height="320dp"
         android:background="@android:color/transparent"
         android:id="@+id/iv_post"
-        android:scaleType="centerCrop"
+        android:scaleType="fitCenter"
         tools:ignore="MissingConstraints" />
 
 

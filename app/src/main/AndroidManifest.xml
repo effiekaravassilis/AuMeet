@@ -10,13 +10,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AuMeet">
         <activity
-            android:name=".PostActivity"
+            android:name=".SendImage"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"/>
         <activity
-            android:name=".UpdatePhoto"
+            android:name=".MessageActivity"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"/>
+        <activity
+            android:name=".ChatActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"/>
+        <activity
+            android:name=".PostActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
+            android:name=".UpdatePhoto"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <activity
             android:name=".ImageActivity"
             android:exported="false"

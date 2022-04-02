@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -29,6 +30,7 @@ public class Fragment4 extends Fragment implements View.OnClickListener{
     ImageButton imageButtonEdit,imageButtonMenu;
     DocumentReference reference;
     FirebaseFirestore firestore;
+    Button btnsendmessage;
 
     @Nullable
     @Override
@@ -55,6 +57,7 @@ public class Fragment4 extends Fragment implements View.OnClickListener{
         bioEt = getActivity().findViewById(R.id.tv_bio_f4);
         emailEt = getActivity().findViewById(R.id.tv_email_f4);
         scheduleEt = getActivity().findViewById(R.id.tv_schedule_f4);
+        btnsendmessage = getActivity().findViewById(R.id.btn_sendmessage_f4);
 
         imageButtonEdit = getActivity().findViewById(R.id.ib_edit_f4);
         imageButtonMenu = getActivity().findViewById(R.id.ib_menu_f4);
@@ -62,25 +65,31 @@ public class Fragment4 extends Fragment implements View.OnClickListener{
         imageButtonMenu.setOnClickListener(this);
         imageButtonEdit.setOnClickListener(this);
         imageView.setOnClickListener(this);
+        btnsendmessage.setOnClickListener(this);
 
     }
 
     @Override
     public void onClick(View view) {
 
-        switch (view.getId()){
+        switch (view.getId()) {
             case R.id.ib_edit_f4:
                 Intent intent = new Intent(getActivity(), UpdateProfile.class);
                 startActivity(intent);
                 break;
             case R.id.ib_menu_f4:
                 BottomSheetMenu bottomSheetMenu = new BottomSheetMenu();
-                bottomSheetMenu.show(getFragmentManager(),"bottomsheet");
+                bottomSheetMenu.show(getFragmentManager(), "bottomsheet");
                 break;
             case R.id.iv_f4:
-                Intent intent1 = new Intent(getActivity(),ImageActivity.class);
+                Intent intent1 = new Intent(getActivity(), ImageActivity.class);
                 startActivity(intent1);
                 break;
+            case R.id.btn_sendmessage_f4:
+                Intent in = new Intent(getActivity(), ChatActivity.class);
+                startActivity(in);
+                break;
+
 
         }
     }

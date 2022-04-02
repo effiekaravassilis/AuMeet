@@ -86,7 +86,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
                 android:id="@+id/iv_post_item"
-                android:scaleType="centerCrop"
+                android:scaleType="fitCenter"
                 android:visibility="visible"
                 tools:ignore="MissingConstraints" />
 
@@ -100,7 +100,6 @@
                 app:show_timeout="1000"
                 android:visibility="visible"
                 app:resize_mode="fill"
-
                 tools:ignore="MissingConstraints" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
