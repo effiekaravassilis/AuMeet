@@ -75,8 +75,8 @@ public class ChatActivity extends AppCompatActivity {
                                 holder.setProfileInChat(getApplication(),model.getName(),model.getUid(),model.getMajor(),model.getUrl());
 
 
-                                String  name = getItem(position).getName();
-                                String  url = getItem(position).getUrl();
+                                String name = getItem(position).getName();
+                                String url = getItem(position).getUrl();
                                 String uid = getItem(position).getUid();
 
 
